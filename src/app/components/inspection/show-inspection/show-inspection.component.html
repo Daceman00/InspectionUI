@@ -1,0 +1,17 @@
+<table class="table table-responsive">
+        <thead>
+            <th>Id</th>
+            <th>Inspection Types</th>
+            <th>Status</th>
+            <th>Comments</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of inspectionTypesList$|async">
+                <td>{{ item.id }}</td>
+                <td>{{ item.inspectionTypeId }}</td>
+                <td>{{ item.status }}</td>
+                <td>{{ item.comments }}</td>
+            </tr>
+        </tbody>
+    
+</table>>
