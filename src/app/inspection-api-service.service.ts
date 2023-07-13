@@ -54,8 +54,4 @@ export class InspectionApiServiceService {
     return this.http.delete(this.inspectionAPIUrl +  `/status/${id}`);
   }
   
-
-
-
-
 }

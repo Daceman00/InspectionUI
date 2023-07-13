@@ -8,7 +8,7 @@ import { InspectionComponent } from './components/inspection/inspection.componen
 import { ShowInspectionComponent } from './components/inspection/show-inspection/show-inspection.component';
 import { AddEditInspectionComponent } from './components/inspection/add-edit-inspection/add-edit-inspection.component';
 import { InspectionApiServiceService } from './inspection-api-service.service';
-import { NavbarComponent } from './navbar/navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { NavbarComponent } from './navbar/navbar/navbar.component';
     InspectionComponent,
     ShowInspectionComponent,
     AddEditInspectionComponent,
-    NavbarComponent
+
   ],
   imports: [
     BrowserModule,
