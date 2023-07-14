@@ -60,7 +60,33 @@ export class AddEditInspectionComponent implements OnInit {
   }
 
   updateInspection(){
+    var inspection = {
+      id:this.id,
+      status:this.status,
+      comments:this.comments,
+      inspectionTypeId:this.inspectionTypeId,
+    }
+    var id:number = this.id;
+    this.service.updateInspection(id, inspection).subscribe(res =>{
+      var closeModalBtn = document.getElementById('add-edit-modal-close');
+      if(closeModalBtn){
+        closeModalBtn.click();
+      }
 
+      var showUpdateSucces = document.getElementById('update-succes-alert');
+      if(showUpdateSucces){
+        showUpdateSucces.style.display = 'block';
+      }
+
+      setTimeout(function() {
+        if(showUpdateSucces){
+          showUpdateSucces.style.display = 'none';
+        }
+
+      },4000)
+
+    }
+    );
   }
 
 }
